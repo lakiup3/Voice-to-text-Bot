@@ -201,7 +201,7 @@ def get_audio_duration(file_path):
     except:
         return 0.0
 
-@bot.message_handler(commands=['start', 'help'])
+@bot.message_handler(commands=['start'])
 def send_welcome(message):
     if ensure_joined(message):
         welcome_text = (
@@ -211,7 +211,7 @@ def send_welcome(message):
             "• audio file\n"
             "• video\n"
             "• to transcribe for free\n\n"
-            "Select the language spoken in your audio or video this is optional 👍"
+            "Select the language spoken in your audio or video:"
         )
         kb = build_lang_keyboard("file")
         bot.reply_to(message, welcome_text, reply_markup=kb, parse_mode="Markdown")
