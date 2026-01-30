@@ -23,7 +23,7 @@ MAX_MESSAGE_CHUNK = 4095
 REQUIRED_CHANNEL = os.environ.get("REQUIRED_CHANNEL", "")
 DOWNLOADS_DIR = os.environ.get("DOWNLOADS_DIR", "./downloads")
 GROQ_KEYS = os.environ.get("GROQ_KEYS", os.environ.get("GROQ_KEY", os.environ.get("ASSEMBLYAI_KEYS", os.environ.get("ASSEMBLYAI_KEY", ""))))
-GROQ_TEXT_MODEL = os.environ.get("GROQ_TEXT_MODEL", "gpt-4o-mini")
+GROQ_TEXT_MODEL = os.environ.get("GROQ_TEXT_MODEL", "openai/gpt-oss-120b")
 ADMIN_CHAT_ID = 6964068910
 
 os.makedirs(DOWNLOADS_DIR, exist_ok=True)
