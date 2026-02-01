@@ -343,7 +343,7 @@ def handle_media(message):
     except:
         pass
     if getattr(media, 'file_size', 0) > MAX_UPLOAD_SIZE:
-        bot.reply_to(message, f"Just send me a file less than {MAX_UPLOAD_MB}MB 😎")
+        bot.reply_to(message, f"Send me file less than {MAX_UPLOAD_MB}MB or see /help 🥰")
         return
     status_msg = bot.reply_to(message, "Downloading your file...")
     tmp_in = tempfile.NamedTemporaryFile(delete=False, dir=DOWNLOADS_DIR)
